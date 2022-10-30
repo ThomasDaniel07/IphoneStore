@@ -1,9 +1,20 @@
 .main {
     background-color: #FFF;
+    padding-top: 80px;
 }
-.main > section {
-    padding: 200px 0;
+.title {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin: 80px 0;
 }
+
+.title.t1 {
+    margin: 30px 0;
+}
+
+/* CONTANEDOR DE PRODUCTOS =================================== */
+
 #productos {
     display: flex;
     width: 70%;
@@ -12,15 +23,7 @@
     justify-content: space-around;
     padding-bottom: 30px;
 }
-.title {
-    font-size: 40px;
-    font-weight: 500;
-    padding: 80px 0 0 0;
-    text-align: center;
-}
-body.dark .title {
-    color: #FFF;
-}
+
 .product {
     max-width: 300px;
     box-shadow: 0px 0px 10px rgb(215, 215, 215);
@@ -29,9 +32,7 @@ body.dark .title {
     margin: 10px;
     background-color: #FFF;
 }
-body.dark .product {
-    box-shadow: 10px 10px 0px rgb(89, 89, 89);
-}
+
 .product > img {
     width: 100%;
     object-fit: cover;
@@ -78,6 +79,9 @@ body.dark .product {
     box-shadow: 0px 0px 5px rgb(66, 66, 66);
 }
 
+
+/* SOBRE NOSOTROS CSS ========================================== */
+
 .sobreNosotros {
     display: flex;
     flex-direction: column;
@@ -90,23 +94,14 @@ body.dark .product {
     text-align: justify;
     margin: 10px 0;
 }
-body.dark .sobreNosotros > p {
-    color: #FFF;
-}
+
 .sobreNosotros > i {
     font-size: 100px;
     animation: topToBottom infinite alternate-reverse  10s ;
 }
 
-@keyframes topToBottom {
-    from {
-        rotate: 0deg;
-    }
-    
-    to {
-        rotate: 360deg;
-    }
-}
+/* CONTACTANOS CSS ======================================== */
+
 .contactanos {
     padding: 10px;
 }
@@ -127,9 +122,7 @@ body.dark .sobreNosotros > p {
 .formularioDeContacto > label {
     margin: 10px 0;
 }
-body.dark .formularioDeContacto > label {
-    color: #FFF;
-}
+
 .formularioDeContacto > textarea {
     min-width: 100%;
     max-width: 100%;
@@ -155,6 +148,40 @@ body.dark .formularioDeContacto > label {
     background-color: rgb(40, 66, 137);
     box-shadow: 0px 0px 5px rgb(33, 55, 113);
 }
+
+
+/* MODO OSCURO MODIFICACIONES */
+
+body.dark .title {
+    color: #FFF;
+}
+
+body.dark .product {
+    box-shadow: 10px 10px 0px rgb(89, 89, 89);
+}
+
+body.dark .sobreNosotros > p {
+    color: #FFF;
+}
+
+body.dark .formularioDeContacto > label {
+    color: #FFF;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes topToBottom {
+    from {
+        rotate: 0deg;
+    }
+    
+    to {
+        rotate: 360deg;
+    }
+}
+
+/* MEDIA QUERY PARA DISPOSITIVOS DE ESCRITORIO */
 
 @media (min-width : 800px) {
     .product{

@@ -10,7 +10,6 @@
     <script src="https://kit.fontawesome.com/f78029de96.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
 
         <nav class="nav">
 
@@ -68,57 +67,28 @@
 
         </nav>
 
-        <section id="contenedorDelSlider">	
-            <a href="javascript: fntExecuteSlide('prev');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
-            <a href="javascript: fntExecuteSlide('next');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
-            <ul class="listslider">
-              <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
-              <li><a itlist="itList_1" href="#"></a></li>
-              <li><a itlist="itList_2" href="#"></a></li>
-            </ul>
-            <ul id="slider">
-              <li style="background-image: url('assets/img3.jpg'); z-index:0; opacity: 1;">
-                <div class="content_slider" >
-                    <div>
-                        <h2>Las mejores ofertas</h2>
-                        <p>Descubra todas nuestras ofertas especiales para ti, miralas todas.</p>
-                        <a href="#productos" class="btnSlider">Ver Productos</a>
-                    </div>
-                </div>
-              </li>
-              <li style="background-image: url('assets/img2.jpg'); ">
-                <div class="content_slider" >
-                    <div>
-                        <h2>Garantia</h2>
-                        <p>Todos nuestros productos cuentan con una garantia desde 1 año hasta los 4 años de garantia. ! </p>
-                        <a href="#productos" class="btnSlider">Ver productos</a>
-                    </div>
-                </div>
-              </li>
-              <li style="background-image: url('assets/img1.jpg'); ">
-                <div class="content_slider" >
-                  <div>
-                    <h2>Envio Gratis</h2>
-                <p>Un 45% de nuestros productos cuenta con envio gratis averigua cuales son estos. !</p>
-                <a href="#productos" class="btnSlider">Ver productos</a>
-              </div>
-                </div>
-              </li>
-           </ul>
-        </section>
-
-    </header>
+        <div class="videoPresentation">
+            <div class="contTextPresentation">
+                <span>Bienvenido a IphoneStore, por favor dezplate hacia abajo para que observes todos nuestros productos</span>
+                <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+            <video autoplay muted loop width="100%">
+                <source src="assets/presentacion.mp4">
+            </video>
+        </div>
+   
 
     <main class="main">
+        
 
-        <h2 class="title">Productos</h2>
+        <h2 class="title t1">Productos</h2>
         
         <section id="productos" style="margin-bottom: 200px ;">
         </section>
 
-        <h2 class="title">Sobre Nosotros</h2>
+        <h2 class="title" id="sobreNosotros">Sobre Nosotros</h2>
 
-        <section class="sobreNosotros" id="sobreNosotros">
+        <section class="sobreNosotros" >
             <i class="fa-brands fa-apple" class="logoImg"></i>
             <p><b>IphoneStore</b> es una empresa con mas de 7 años en el mercado lanzando diferentes modelos de celulares con el fin de ofrecerle la mejor atencion a nuestros clientes y aumentar el rendimiento de estos. Formados en los valores de innovacion y privacidad, respetamos los datos sensibles de nuestros usuarios, siendo esto nuestro principal fuerte.</p>
         </section>
@@ -126,14 +96,25 @@
         <h2 class="title">Contactanos</h2>
 
         <section class="contactanos" id="contactanos">
-            <form class="formularioDeContacto" action="" method="post">
+
+            <form class="formularioDeContacto" action="https://formsubmit.co/48ac5b161d35061dfbe1b3a93915d246" id="formulario" method="post">
 
                 <label for="correo">Correo</label>
-                <input type="mail" id="correo" required placeholder="example@outlook.com">
+
+                <input type="mail" id="correo" name="correo" required placeholder="example@outlook.com">
+
                 <label for="mensaje">Mensaje</label>
-                <textarea id="correo"required placeholder="Hola !, viendo su pagina..."></textarea>
+
+                <textarea id="correo" name="mensaje" required placeholder="Hola !, viendo su pagina..."></textarea>
+
                 <button type="submit" class="btnSend">Enviar Mensaje</button>
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+
+                <input type="hidden" name="_captcha" value="false">
+
             </form>
+
         </section>
 
     </main>

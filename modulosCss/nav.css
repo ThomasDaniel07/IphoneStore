@@ -1,3 +1,4 @@
+/* MENU DE NAVEGACION EN LA PARTE SUPERIOR CSS ====================== */
 .nav {
     position: fixed;
     width: 100%;
@@ -5,12 +6,9 @@
     justify-content: space-around;
     align-items: center;
     min-height: 80px;
-    background-color: #EEE;
+    background-color: rgb(252, 252, 252);
     z-index: 10000;
-}
-body.dark .ul_pc_element {
-  color: #fff;
-
+    box-shadow: 0px 1px 10px rgb(206, 206, 206);
 }
 .logo {
     display: flex;
@@ -28,6 +26,9 @@ body.dark .ul_pc_element {
 .ul_pc{
     display: none;
 }
+
+/* NAVEGACION EN MOVIL */
+
 .ul_mobile {
     display: flex;
     flex-direction: column;
@@ -51,6 +52,7 @@ body.dark .ul_pc_element {
     color: #FFF;
     font-weight: 400;
 }
+
 .btnModoOscuro {
     border: none;
     margin: 0;
@@ -59,9 +61,10 @@ body.dark .ul_pc_element {
     font-size: 1em;
     color: #fff;
 }
-body.dark .btnModoOscuro {
-    color: #FFF;
-}
+
+
+/* BOTON DE RESPUESTA EN RESOLUCONES MOVILES */
+
 .navBtn {
     display: flex;
     flex-direction: column;
@@ -75,9 +78,7 @@ body.dark .btnModoOscuro {
     margin: 3px 0;
     transition: all 500ms;
 }
-body.dark .bars {
-    background-color: #FFF;
-}
+
 .navBtn.active .bars:nth-child(1){
     transform:translateY(5px) translateX(-.5px);
     rotate: 50deg;
@@ -91,163 +92,64 @@ body.dark .bars {
     rotate: -50deg;
 }
 
-#contenedorDelSlider
-{
+/* VIDEO DE PRESENTACION =========================== */
+
+.videoPresentation {
     position: relative;
-    display: block;
-    width: 100%;
-}
-#slider {
-    position: relative;
-    display: block;
-    width: 100%;
+    top: 80px;
     height: 100vh;
-    min-height: 500px;
+    background-color: rgb(33, 55, 113);
 }
-#slider li {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100%;
+.videoPresentation > video {
     height: 100%;
-    display: block;
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -ms-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    z-index: -1;
-    opacity: 0;
+    width: 100%;
+    object-fit: cover;
+    filter: opacity(.4);
 }
-#contenedorDelSlider .arrowPrev, #contenedorDelSlider .arrowNext{
-    font-size: 30pt;
-    color: rgba(204, 204, 204, 0.65);
-    cursor: pointer;
+
+.contTextPresentation{
     position: absolute;
-    top: 50%;
-    left: 50px;
-    z-index: 2; 
-}
-#contenedorDelSlider .arrowNext {
-    left: initial;
-    right: 50px !important;
-}
-.content_slider{
-    padding: 15px 30px;
-    color: #FFF;
-    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-}
-.content_slider div{
+    width: 100%;
     text-align: center;
-}
-.content_slider h2{
-    font-family: 'arial';
-    font-size: 30pt;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.content_slider p {
-    font-size: 15pt;
-    font-family: 'arial';
-    color: #FFF;
-    margin-bottom: 20px;
-}
-#slider li .content_slider{
-    background: rgba(0, 0, 0, 0.50);
-    padding: 10px 125px;
-}
-.content_slider{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-.btnSlider{
     color: #FFF;
-    font-size: 15pt;
-    font-family: 'arial';
-    letter-spacing: 1px;
-    padding: 10px 50px;
-    border: 1px solid #CCC;
-    background: rgba(13, 13, 13, 0.55);
-    border-radius: 31px;
-    text-decoration: none;
-    transition: .5s all;
-}
-.btnSlider:hover{
-    background: #111;
-    border: 1px solid #111;
-}
-.listslider {
-    position: absolute;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 50%;
-    bottom: 5%;
-    list-style: none;
-    z-index: 2;
-    transform: translateX(-50%);
-}
-.listslider li {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 5px;
-}
-.listslider li a {
-    background: #CCC;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.item-select-slid {
-    background: #FFF ;
-}
-
-@media screen and (max-width: 460px){
-	.content_slider h2 {
-	    font-size: 15pt ;
-	}
-	.content_slider p {
-	    font-size: 12pt ;
-	}
-	#contenedorDelSlider .arrowPrev, #contenedorDelSlider .arrowNext{
-		font-size: 20pt;
-	}
-	#contenedorDelSlider .arrowPrev{
-		left: 15px;
-	}
-	#contenedorDelSlider .arrowNext{
-		right: 15px ;
-	}
-	#slider{
-		height: 900px;
-		min-height: 400px;
-	}
-	#slider li .content_slider{
-		padding: 10px 35px;
-	}
-	.btnSlider{
-		padding: 10px 30px;
-    	font-size: 10pt;
-	}
+    font-size: 2em;
 
 }
+
+/* ======================== DARK MODE ================== */
+
+body.dark .ul_mobile{
+    background-color: #EEE;
+}
+body.dark .ul_mobile_elements{
+    color: #000;
+}
+
+body.dark .btnModoOscuro{
+    color: #000;
+}
+
+body.dark .ul_pc_element {
+    color: #fff;
+  
+}
+
+body.dark .bars {
+    background-color: #FFF;
+}
+
+body.dark .nav {
+    box-shadow: 0 1px 10px #111;
+}
+
+/* ==================== MEDIA QUERY PARA DISEÑO DE RESPUESTA EN PC ================== */
+
 
 @media (min-width : 800px) {
     .ul_mobile{
@@ -263,9 +165,17 @@ body.dark .bars {
         width: 80%;
     }
     .ul_pc_elements > a {
+        transition: none;
         color: #000;
+    }
+    .ul_pc_elements > a:hover {
+        border: none;
+        border-bottom: 2px solid rgb(33, 55, 113);
     }
     .btnModoOscuro {
         color: #000;
+    }
+    body.dark .btnModoOscuro {
+        color: #FFF;
     }
 }

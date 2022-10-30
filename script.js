@@ -16,59 +16,7 @@ liElements.forEach(i => i.addEventListener('click',()=>{
     btn.classList.remove('active')
 }))
 
-
-if(document.querySelector('#container-slider')){
-    setInterval('fntExecuteSlide("next")',5000);
- }
-
-
-//------------------------------ LIST SLIDER -------------------------
-if(document.querySelector('.listslider')){
-    let link = document.querySelectorAll(".listslider li a");
-    link.forEach(function(link) {
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            let item = this.getAttribute('itlist');
-            let arrItem = item.split("_");
-            ejecutarSlider(arrItem[1]);
-            return false;
-        });
-    });
-}
- 
-function ejecutarSlider(side){
-    let parentTarget = document.getElementById('slider');
-    let elements = parentTarget.getElementsByTagName('li');
-    let curElement, nextElement;
-
-    for(var i=0; i<elements.length;i++){
-
-        if(elements[i].style.opacity==1){
-            curElement = i;
-            break;
-        }
-    }
-    if(side == 'prev' || side == 'next'){
-
-        if(side=="prev"){
-            nextElement = (curElement == 0)?elements.length -1:curElement -1;
-        }else{
-            nextElement = (curElement == elements.length -1)?0:curElement +1;
-        }
-    }else{
-        nextElement = side;
-        side = (curElement > nextElement)?'prev':'next';
-
-    }
-    //RESALTA LOS PUNTOS
-    let elementSel = document.getElementsByClassName("listslider")[0].getElementsByTagName("a");
-    elementSel[curElement].classList.remove("item-select-slid");
-    elementSel[nextElement].classList.add("item-select-slid");
-    elements[curElement].style.opacity=0;
-    elements[curElement].style.zIndex =0;
-    elements[nextElement].style.opacity=1;
-    elements[nextElement].style.zIndex =1;
-}
+// ============================ OBTENER INFORMACION DE PRODUCTOS ATRAVES DE API =============
 
 const obtenerInformacionIphone = async()=>{
 
@@ -85,7 +33,7 @@ const obtenerInformacionIphone = async()=>{
             iphones += `
                 <article class="product">
                     <img src="${iphone.img}" alt="">
-                    <span>${iphone.name}</span>
+                    <span class="nameOfProduct">${iphone.name}</span>
                     <p>${iphone.description} </p>
                     <div class="contBtn">
                         <button class="btnBuy">Comprar <i class="fa-solid fa-cart-shopping"></i></button>
@@ -108,7 +56,7 @@ const obtenerInformacionIphone = async()=>{
         }))
 
         btnShowMore.forEach(i => i.addEventListener('click',()=>{
-            alert('ver mas')
+            console.log(i);
         }))
 
     } catch (error) {
@@ -117,6 +65,7 @@ const obtenerInformacionIphone = async()=>{
 
     }   
 }
+
 obtenerInformacionIphone()
 
 //============================ MODO OSCURO ==========================
@@ -126,6 +75,17 @@ const btnModoOscuro = document.querySelectorAll('.btnModoOscuro');
 
 btnModoOscuro.forEach(i => i.addEventListener('click',()=>{
     document.body.classList.toggle('dark')
+    menuMobile.classList.remove('active')
+    btn.classList.remove('active')
 }))
+
+//========================== MODAL CUANDO ENVIE UN CORREO EN EL APARTADO DE CONTACTANOS ===========
+
+
+const form = document.getElementById('formulario')
+
+form.addEventListener('submit',()=>{
+    
+})
 
 

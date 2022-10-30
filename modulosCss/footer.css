@@ -1,0 +1,16 @@
+.footer {
+    position: relative;
+    bottom: 0;
+    background-color: #333;
+    padding: 10px;
+    color: #EEE;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    z-index: 100000;
+}
+body.dark .footer {
+    background-color: #FFF;
+    color: #000;
+    font-weight: 400;
+}

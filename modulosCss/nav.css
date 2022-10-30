@@ -8,6 +8,23 @@
     background-color: #EEE;
     z-index: 10000;
 }
+body.dark .ul_pc_element {
+  color: #fff;
+
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.fa-apple{
+    font-size: 3em;
+    color: #111;
+    margin-right: 15px;
+}
+.logo > h1 {
+    color: #111;
+    font-weight: 500;
+}
 .ul_pc{
     display: none;
 }
@@ -42,6 +59,9 @@
     font-size: 1em;
     color: #fff;
 }
+body.dark .btnModoOscuro {
+    color: #FFF;
+}
 .navBtn {
     display: flex;
     flex-direction: column;
@@ -54,6 +74,9 @@
     background-color: black;
     margin: 3px 0;
     transition: all 500ms;
+}
+body.dark .bars {
+    background-color: #FFF;
 }
 .navBtn.active .bars:nth-child(1){
     transform:translateY(5px) translateX(-.5px);
@@ -193,15 +216,15 @@
     display: block;
 }
 .item-select-slid {
-    background: #FFF  !important;
+    background: #FFF ;
 }
 
 @media screen and (max-width: 460px){
 	.content_slider h2 {
-	    font-size: 15pt !important;
+	    font-size: 15pt ;
 	}
 	.content_slider p {
-	    font-size: 12pt !important;
+	    font-size: 12pt ;
 	}
 	#contenedorDelSlider .arrowPrev, #contenedorDelSlider .arrowNext{
 		font-size: 20pt;
@@ -210,7 +233,7 @@
 		left: 15px;
 	}
 	#contenedorDelSlider .arrowNext{
-		right: 15px !important;
+		right: 15px ;
 	}
 	#slider{
 		height: 900px;

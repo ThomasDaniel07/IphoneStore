@@ -1,3 +1,5 @@
+// ----------------------------------- NAV DE RESPUESTA, FUNCIONALIDAD DEL NAV EN DIMENSIONES MOVILES ------------
+
 const btn = document.querySelector('.navBtn')
 
 const menuMobile = document.querySelector('.ul_mobile')
@@ -13,24 +15,28 @@ liElements.forEach(i => i.addEventListener('click',()=>{
     menuMobile.classList.remove('active')
     btn.classList.remove('active')
 }))
+
+
 if(document.querySelector('#container-slider')){
     setInterval('fntExecuteSlide("next")',5000);
  }
- //------------------------------ LIST SLIDER -------------------------
+
+
+//------------------------------ LIST SLIDER -------------------------
 if(document.querySelector('.listslider')){
-let link = document.querySelectorAll(".listslider li a");
-link.forEach(function(link) {
-    link.addEventListener('click', function(e){
-        e.preventDefault();
-        let item = this.getAttribute('itlist');
-        let arrItem = item.split("_");
-        fntExecuteSlide(arrItem[1]);
-        return false;
-    });
+    let link = document.querySelectorAll(".listslider li a");
+    link.forEach(function(link) {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            let item = this.getAttribute('itlist');
+            let arrItem = item.split("_");
+            ejecutarSlider(arrItem[1]);
+            return false;
+        });
     });
 }
  
-function fntExecuteSlide(side){
+function ejecutarSlider(side){
     let parentTarget = document.getElementById('slider');
     let elements = parentTarget.getElementsByTagName('li');
     let curElement, nextElement;
@@ -93,6 +99,18 @@ const obtenerInformacionIphone = async()=>{
 
         document.getElementById('productos').innerHTML = iphones
 
+        const btnBuy = document.querySelectorAll('.btnBuy')
+
+        const btnShowMore = document.querySelectorAll('.btnAddCar')
+
+        btnBuy.forEach(i => i.addEventListener('click',()=>{
+            alert('Compra Exitosa')
+        }))
+
+        btnShowMore.forEach(i => i.addEventListener('click',()=>{
+            alert('ver mas')
+        }))
+
     } catch (error) {
 
         console.log(error);
@@ -101,10 +119,13 @@ const obtenerInformacionIphone = async()=>{
 }
 obtenerInformacionIphone()
 
-let btnBuy = document.querySelector('.btnBuy')
+//============================ MODO OSCURO ==========================
 
-btnBuy.addEventListener('click',()=>{
-    alert ('producto comprado exitosamente');
-})
+const btnModoOscuro = document.querySelectorAll('.btnModoOscuro');
+
+
+btnModoOscuro.forEach(i => i.addEventListener('click',()=>{
+    document.body.classList.toggle('dark')
+}))
 
 

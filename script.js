@@ -17,20 +17,20 @@ if(document.querySelector('#container-slider')){
     setInterval('fntExecuteSlide("next")',5000);
  }
  //------------------------------ LIST SLIDER -------------------------
- if(document.querySelector('.listslider')){
-    let link = document.querySelectorAll(".listslider li a");
-    link.forEach(function(link) {
-       link.addEventListener('click', function(e){
-          e.preventDefault();
-          let item = this.getAttribute('itlist');
-          let arrItem = item.split("_");
-          fntExecuteSlide(arrItem[1]);
-          return false;
-       });
-     });
- }
+if(document.querySelector('.listslider')){
+let link = document.querySelectorAll(".listslider li a");
+link.forEach(function(link) {
+    link.addEventListener('click', function(e){
+        e.preventDefault();
+        let item = this.getAttribute('itlist');
+        let arrItem = item.split("_");
+        fntExecuteSlide(arrItem[1]);
+        return false;
+    });
+    });
+}
  
- function fntExecuteSlide(side){
+function fntExecuteSlide(side){
     let parentTarget = document.getElementById('slider');
     let elements = parentTarget.getElementsByTagName('li');
     let curElement, nextElement;
@@ -62,4 +62,49 @@ if(document.querySelector('#container-slider')){
     elements[curElement].style.zIndex =0;
     elements[nextElement].style.opacity=1;
     elements[nextElement].style.zIndex =1;
- }
+}
+
+const obtenerInformacionIphone = async()=>{
+
+    try {
+
+        const peticion = await fetch ('api.json')
+
+        const datos = await peticion.json();
+
+        const array = datos.iphoneInfo;
+
+        let iphones = ''
+        array.forEach(iphone => {
+            iphones += `
+                <article class="product">
+                    <img src="${iphone.img}" alt="">
+                    <span>${iphone.name}</span>
+                    <p>${iphone.description} </p>
+                    <div class="contBtn">
+                        <button class="btnBuy">Comprar <i class="fa-solid fa-cart-shopping"></i></button>
+                        <button class="btnAddCar">Ver mas</i></button>
+                    </div>
+                </article>
+            `
+        });
+
+        
+
+        document.getElementById('productos').innerHTML = iphones
+
+    } catch (error) {
+
+        console.log(error);
+
+    }   
+}
+obtenerInformacionIphone()
+
+let btnBuy = document.querySelector('.btnBuy')
+
+btnBuy.addEventListener('click',()=>{
+    alert ('producto comprado exitosamente');
+})
+
+

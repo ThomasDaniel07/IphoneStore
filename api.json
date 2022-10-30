@@ -1,0 +1,24 @@
+{
+    "iphoneInfo":[
+        {
+            "name" : "Iphone 12Pro Max",
+            "description" : "El Apple 12Pro Max es el iPhone más grande hasta la fecha y con mejor resolución, pero no es tanta la diferencia si lo comparamos con el iPhone 11 Pro.",
+            "img" : "https://i.blogs.es/a8f74e/iphone-12-pro-00-08/1366_2000.jpg"
+        },
+        {
+            "name" : "Iphone 11Pro Max",
+            "description":"El Apple iPhone 11 Pro y el iPhone 11 Pro Max son resistentes a las salpicaduras, el agua y el polvo.",
+            "img" : "https://tecnomobil.com.co/wp-content/uploads/2021/06/5-2.jpg"
+        },
+        {
+            "name":"Iphone X",
+            "description": "El Apple iPhone X es el móvil de gama llega al mercado con una pantalla OLED panorámica con notch y un peso de 174 g. ",
+            "img":"https://cdn.pocket-lint.com/r/s/1200x630/assets/images/142227-phones-review-iphone-x-review-photos-image1-ahdsiyvum0.jpg"
+        },
+        {
+            "name":"Iphone XR",
+            "description":"Es un teléfono inteligente de gama alta, hermano menor del iPhone XS y el iPhone XS MAX, diseñado y fabricado por Apple.",
+            "img":"https://www.claro.com.co/portal/recursos/co/cpp/promociones/imagenes/1599247191457-1583438042193-1539123030305-Imagen.jpg"
+        }
+    ]
+}

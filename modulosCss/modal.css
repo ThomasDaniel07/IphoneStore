@@ -41,20 +41,17 @@
 .modal.active .nombreModal {
     font-size: 1.4em;
     font-weight: 600;
-    font-family: 'Montserrat';
     margin: 10px 0;
 }
 .modal.active .precioModal {
     font-size: 1.2em;
     font-weight: 600;
-    font-family: 'Motserrat';
     margin-bottom: 5px;
 }
 .modal.active .descripcionSpan {
     margin-top: 10px;
     font-weight: 500;
     font-size: 1em;
-    font-family: 'Motserrat';
 }
 .modal.active .descripcion {
     padding: 0 0 0 15px;

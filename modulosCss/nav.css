@@ -38,7 +38,7 @@
     right: -100%;
     text-align: center;
     background-color: rgb(29, 29, 29);
-    width: 60%;
+    width: 50%;
     height: 100vh;
     transition: all 500ms;
 }
@@ -125,14 +125,14 @@
 /* ======================== DARK MODE ================== */
 
 body.dark .ul_mobile{
-    background-color: #EEE;
+    background-color: rgb(33, 55, 113);
 }
 body.dark .ul_mobile_elements{
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 body.dark .btnModoOscuro{
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 body.dark .ul_pc_element {

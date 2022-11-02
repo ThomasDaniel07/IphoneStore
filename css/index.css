@@ -6,6 +6,7 @@
 
 @import url('../modulosCss/footer.css');
 
+@import url('../modulosCss/modal.css');
 *{
     padding: 0;
     margin: 0;

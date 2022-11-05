@@ -40,6 +40,7 @@
     margin: 20px auto;
 }
 .modal.active .nombreModal {
+<<<<<<< HEAD
     font-size: 2em;
     font-weight: 400;
     text-align: center;
@@ -56,6 +57,21 @@
     margin-top: 10px;
     font-weight: 400;
     font-size: 1.3em;
+=======
+    font-size: 1.4em;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.modal.active .precioModal {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.modal.active .descripcionSpan {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 1em;
+>>>>>>> 41cacfd6af8ad009608de82226ac23829d953a77
 }
 .modal.active .descripcion {
     padding: 0 0 0 15px;
@@ -66,6 +82,7 @@
 }
 .modal.active .fa-xmark {
     text-align: center;
+<<<<<<< HEAD
     font-size: 3.1em;
     color: rgb(33, 55, 113);
     box-shadow: 0 0 10px #DDD;
@@ -104,3 +121,8 @@
         width: 30%;
     }
 }
+=======
+    font-size: 3em;
+    color: rgb(201, 60, 52);
+}
+>>>>>>> 41cacfd6af8ad009608de82226ac23829d953a77

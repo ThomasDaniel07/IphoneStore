@@ -98,7 +98,7 @@
     position: relative;
     top: 80px;
     height: 100vh;
-    background-color: rgb(33, 55, 113);
+    background-color: rgb(23, 23, 24);
 }
 .videoPresentation > video {
     height: 100%;
@@ -118,8 +118,13 @@
     align-items: center;
     justify-content: center;
     color: #FFF;
-    font-size: 2em;
+    font-size: 1.7em;
 
+}
+
+.fa-arrow-down-long{
+    position: relative;
+    animation: UpToDown infinite alternate-reverse 500ms;
 }
 
 /* ======================== DARK MODE ================== */
@@ -177,5 +182,15 @@ body.dark .nav {
     }
     body.dark .btnModoOscuro {
         color: #FFF;
+    }
+}
+
+/* ANIMACIONES */
+
+@keyframes UpToDown {
+    from {
+        top: 0;
+    }to {
+        top: 10px;
     }
 }

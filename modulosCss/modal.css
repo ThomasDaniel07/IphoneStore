@@ -1,5 +1,6 @@
 .modal {
     display: none;
+    animation: opacityUp 200ms ease-in-out;
 }
 
 .modal.active {
@@ -20,7 +21,6 @@
 .modal.active .cuadro{
     width: 90%;
     overflow-y: auto;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
@@ -31,30 +31,31 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    box-shadow: 0px 1px 10px rgb(163, 163, 163);
 }
 .modal.active .contTextProduct{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
 }
 .modal.active .nombreModal {
-    font-size: 1.4em;
-    font-weight: 600;
-    font-family: 'Montserrat';
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    border-bottom: 1px solid royalblue;
     margin: 10px 0;
 }
 .modal.active .precioModal {
-    font-size: 1.2em;
-    font-weight: 600;
-    font-family: 'Motserrat';
-    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 10px;
 }
 .modal.active .descripcionSpan {
     margin-top: 10px;
-    font-weight: 500;
-    font-size: 1em;
-    font-family: 'Motserrat';
+    font-weight: 400;
+    font-size: 1.3em;
 }
 .modal.active .descripcion {
     padding: 0 0 0 15px;
@@ -65,6 +66,41 @@
 }
 .modal.active .fa-xmark {
     text-align: center;
-    font-size: 3em;
-    color: rgb(201, 60, 52);
+    font-size: 3.1em;
+    color: rgb(33, 55, 113);
+    box-shadow: 0 0 10px #DDD;
+    border-radius: 100%;
+    margin: auto;
+    width: 20%;
+}
+
+
+/* ANIMACION DEL MODAL */
+
+@keyframes opacityUp {
+    from {
+        opacity: -1;
+    }to {
+        opacity: 1;
+    }
+}
+
+/* DISENO DE RESPUESTA PARA DISPOSITIVO PC */
+
+@media (min-width: 500px) {
+    .modal.active .cuadro{
+        width: 75%;
+    }
+}
+
+@media (min-width: 750px) {
+    .modal.active .cuadro {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .modal.active .cuadro{
+        width: 30%;
+    }
 }

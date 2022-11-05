@@ -63,9 +63,15 @@ const obtenerInformacionIphone = async()=>{
 
             const img = array[posicion_del_boton_en_un_producto].img;
 
-            const precio = array[posicion_del_boton_en_un_producto].precio
+            const precio = array[posicion_del_boton_en_un_producto].precio;
 
-            const descripcion = array[posicion_del_boton_en_un_producto].description
+            const descripcion = array[posicion_del_boton_en_un_producto].description;
+
+            const almacenamiento = array[posicion_del_boton_en_un_producto].almacenamiento;
+
+            const procesador = array[posicion_del_boton_en_un_producto].procesador;
+
+            const camara_frontal = array[posicion_del_boton_en_un_producto].camara_frontal;
 
             const modalCont = document.querySelector('.modal');
 
@@ -78,9 +84,9 @@ const obtenerInformacionIphone = async()=>{
                         <span>${descripcion}</span>
                         <span class="descripcionSpan">Decripcion Tecnica :</span>
                         <ul class="descripcion">
-                            <li>Almacenamiento : 42Gb</li>
-                            <li>Procesador : Core i4</li>
-                            <li>Camara Frontal : 15 pixeles</li>
+                            <li>Almacenamiento : ${almacenamiento}</li>
+                            <li>Procesador : ${procesador}</li>
+                            <li>Camara Frontal : ${camara_frontal}</li>
                         </ul>
                         <i class="fa-solid fa-xmark"></i>
                     </div>

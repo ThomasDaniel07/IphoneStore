@@ -40,7 +40,6 @@ button {
     width: 100%;
     object-fit: cover;
     user-select: none;
-
 }
 .product > span {
     font-size: 20px;

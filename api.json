@@ -35,6 +35,15 @@
             "almacenamiento" : "64gb",
             "procesador" : "Apple A9 Plus",
             "camara_frontal" : "20px"
-        }
+        },
+        {
+            "name":"Iphone 7S Plus",
+            "precio": "$ 2.500.000",
+            "description":"Es un Iphone que nace de la innovacion",
+            "img":"https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP744/iphone7-plus-jetblack.png",
+            "almacenamiento":"140gb",
+            "procesador":"Apple A8 Plus",
+            "camara_frontal":"20px"
+       }
     ]
 }
